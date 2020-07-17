@@ -9,7 +9,7 @@ abstract class PayoutResult extends \yii\base\Component implements PayoutResultI
 
     public function __construct($response, array $options = [])
     {
-        parent::__constuct($options);
+        parent::__construct($options);
 
         $this->setResponse($response);
     }
