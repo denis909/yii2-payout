@@ -2,17 +2,19 @@
 
 namespace denis909\yii;
 
-abstract class PayoutResult implements PayoutResultInterface
+abstract class PayoutResult extends \yii\base\Component implements PayoutResultInterface
 {
 
-    protected $_resonse = [];
+    protected $_response = [];
 
-    public function __construct(array $response = [])
+    public function __construct($response, array $options = [])
     {
+        parent::__constuct($options);
+
         $this->setResponse($response);
     }
 
-    public function setResponse(array $response)
+    public function setResponse($response)
     {
         $this->_response = $response;
     }
