@@ -23,13 +23,13 @@ class PayoutEvent extends \yii\base\Event
     {
         parent::__construct($config);
 
-        Assert::notEmpty($this->provider, 'Payout provider is empty.');
+        Assert::notEmpty($this->provider, 'Provider is empty.');
 
-        Assert::notEmpty($this->amount, 'Payout amount is empty.');
+        Assert::notEmpty($this->amount, 'Amount is empty.');
 
-        Assert::notEmpty($this->currency, 'Payout currency is empty.');
+        Assert::notEmpty($this->currency, 'Currency is empty.');
 
-        Assert::notEmpty($this->account, 'Payout account is empty.');
+        Assert::notEmpty($this->account, 'Account is empty.');
     }
 
     public function getResult() : PayoutResult
