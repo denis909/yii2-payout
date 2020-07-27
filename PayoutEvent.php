@@ -17,7 +17,13 @@ class PayoutEvent extends \yii\base\Event
 
     public $description;
 
-    protected $_result;
+    public $responseId;
+
+    public $responseError;
+
+    public $responseLink;
+
+    public $response;    
 
     public function __construct(array $config = [])
     {
@@ -30,16 +36,6 @@ class PayoutEvent extends \yii\base\Event
         Assert::notEmpty($this->currency, 'Currency is empty.');
 
         Assert::notEmpty($this->account, 'Account is empty.');
-    }
-
-    public function getResult() : PayoutResult
-    {
-        return $this->_result;
-    }
-
-    public function setResult(PayoutResult $result)
-    {
-        $this->_result = $result;
     }
 
 }
