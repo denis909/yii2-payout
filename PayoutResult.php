@@ -19,7 +19,7 @@ abstract class PayoutResult extends \yii\base\Component implements PayoutResultI
         $this->_response = $response;
     }
 
-    public function getResponse() : array
+    public function getResponse()
     {
         return $this->_response;
     }
